@@ -14,7 +14,14 @@ func TestSlogevent(t *testing.T) {
 		eventRecord = e
 	}, nil))
 
-	l.With("key", "value").WithGroup("g").With("ingroup", true).Info("hello world", "inline", 1)
+	l = l.With("key", "value").WithGroup("g").With("ingroup", true)
+
+	allocs := testing.AllocsPerRun(1, func() {
+		l.Info("hello world", "inline", 1)
+	})
+	if allocs > 5 {
+		t.Fatalf("too many memory allocations: %.0f", allocs)
+	}
 
 	if eventRecord.Level != slog.LevelInfo {
 		t.Fatalf("wrong level: %s", eventRecord.Level)
