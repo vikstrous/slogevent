@@ -16,7 +16,7 @@ This package provides the missing glue to allow you to write log handlers like t
 func EventHandler(ctx context.Context, e slogevent.Event) {
     if e.Level >= slog.LevelError {
         attrs, _ := json.Marshal(e.Attrs)
-        SoundTheAlarm(e.Message, string(e.attrs))
+        SoundTheAlarm(e.Message, string(attrs))
     }
 }
 ```
