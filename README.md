@@ -28,6 +28,8 @@ To use this custom even handler with `slog`, pass it into slog as a handler when
 slogLogger := slog.New(slogevent.NewHandler(EventHandler, slog.NewTextHandler(os.Stderr, nil)))
 ```
 
+There's a more detailed example in the [slogexamples](https://github.com/vikstrous/slogexamples) repo along with other examples of how to extend slog without writing a handler.
+
 slogevent acts as a wrapper for whatever handler you would normally use and fires your event before the next handler runs. It takes care of the annoying glue code needed to collect attrs and groups when `With()` and `WithGroup()` are used and converts all groups into a flag list of `slog.Attr`s that you can use without much effort.
 
 This package is pre-v1 and the API may change. Please provide feedback about the API in the issues and let me know how I can make your slogging easier :muscle:
