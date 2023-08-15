@@ -1,6 +1,6 @@
 # slogevent
 
-[![godoc](https://godoc.org/github.com/vikstrous/slogevent?status.svg)][godoc]
+[![Go Reference](https://pkg.go.dev/badge/github.com/vikstrous/slogevent.svg)](https://pkg.go.dev/github.com/vikstrous/slogevent)
 
 slogevent is a simplified API for integrating with slog.
 
