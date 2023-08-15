@@ -1,5 +1,7 @@
 # slogevent
 
+[![godoc](https://godoc.org/github.com/vikstrous/slogevent?status.svg)][godoc]
+
 slogevent is a simplified API for integrating with slog.
 
 Add `slogevent` as a dependency by running:
