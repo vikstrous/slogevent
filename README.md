@@ -2,7 +2,7 @@
 
 slogevent is a simplified API for integrating with slog.
 
-Add slogevent as a dependency with:
+Add `slogevent` as a dependency by running:
 
 ```sh
 go get github.com/vikstrous/slogevent
